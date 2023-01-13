@@ -9,6 +9,9 @@ TagManager:
   - level2
   - level3
   - mainmenu
+  - targetTag
+  - Death
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

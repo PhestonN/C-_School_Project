@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,10 +15,22 @@ public class fireScript : MonoBehaviour
     private float fireCountdown1 = 0f;
     private float fireCountdown2 = 0f;
     private bool firedFrom1 = true;
+    public bool canShoot = false;
+    
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            canShoot = true;
+            Debug.Log("deneme");
+        }
+    }
+    
 
     void Update()
     {
-        if (fireCountdown1 <= 0f)
+        if (canShoot && fireCountdown1 <= 0f)
         {
             if (firedFrom1)
             {
@@ -41,4 +54,6 @@ public class fireScript : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.velocity = firePoint.forward * bulletSpeed;
     }
+
+    
 }
