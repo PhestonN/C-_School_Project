@@ -5,21 +5,22 @@ using UnityEngine;
 using UnityEngine;
 
 public class ThirdPersonCamera : MonoBehaviour
-{
-    public Transform target; // kameranın takip edeceği hedef
-    public float distance = 3.0f; // kamera hedefe olan mesafesi 
-    public float height = 1.0f; // kamera yüksekliği
-    public float damping = 5.0f; // yumuşatma değeri
+{  
+    
+    public Transform target; 
+    public Vector3 offset; 
+    public float smoothSpeed = 0.125f;
+    private Quaternion originalRotation; 
+    
 
+    void Start() {
+        originalRotation = transform.rotation; 
+    }
     void LateUpdate()
     {
-        // hedefin pozisyonunu al
-        Vector3 wantedPosition = target.position + new Vector3(0, height, -distance);
-        // kameranın pozisyonunu al
-        Vector3 currentPosition = Vector3.Lerp(transform.position, wantedPosition, damping * Time.deltaTime);
-        // kameranın pozisyonunu güncelle
-        transform.position = currentPosition;
-        // kameranın bakacağı noktayı hedef pozisyonuna ayarla
-        transform.LookAt(target);
+        transform.position = target.position + Quaternion.Euler(0, target.eulerAngles.y + 90, 0) * offset; 
+        
+        transform.LookAt(target); 
+        
     }
-}
+    }

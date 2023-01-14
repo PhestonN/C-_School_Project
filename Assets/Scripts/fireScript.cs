@@ -17,6 +17,7 @@ public class fireScript : MonoBehaviour
     private bool firedFrom1 = true;
     public bool canShoot = false;
     
+    
 
     void OnTriggerEnter(Collider other)
     {
@@ -54,6 +55,7 @@ public class fireScript : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.velocity = firePoint.forward * bulletSpeed;
     }
+    
 
     
 }

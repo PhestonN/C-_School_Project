@@ -12,6 +12,8 @@ TagManager:
   - targetTag
   - Death
   - CheckPoint
+  - hub
+  - audio
   layers:
   - Default
   - TransparentFX

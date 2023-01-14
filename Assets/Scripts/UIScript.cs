@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class UIScript : MonoBehaviour
 {
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     public void Quit()
     {
@@ -14,6 +16,7 @@ public class UIScript : MonoBehaviour
 
     public void start()
     {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
@@ -37,6 +40,14 @@ public class UIScript : MonoBehaviour
         if (gameObject.CompareTag("mainmenu"))
         {
             SceneManager.LoadScene(0);
+        }
+        if (gameObject.CompareTag("hub"))
+        {
+            SceneManager.LoadScene(1);
+        }
+        if (gameObject.CompareTag("audio"))
+        {
+            audioSource.Play();
         }
 
 
