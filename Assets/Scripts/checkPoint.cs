@@ -5,11 +5,11 @@ using UnityEngine;
 public class checkPoint : MonoBehaviour
 {
     public Transform chracter;
-    
+    private Rigidbody rb;
     private Vector3 spawnPoint;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
@@ -25,6 +25,9 @@ public class checkPoint : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Death"))
         {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.Sleep();
             spawn();
 
         }
@@ -32,6 +35,7 @@ public class checkPoint : MonoBehaviour
     }
     private void spawn()
     {
+        
         chracter.position = spawnPoint;
     }
 }

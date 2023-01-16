@@ -11,6 +11,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/teleportEasterEgg.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/rotateİtself.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/checkPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/bulletDestroy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -56,7 +58,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673621287095</updated>
-      <workItem from="1673621300580" duration="19693000" />
+      <workItem from="1673621300580" duration="20290000" />
+      <workItem from="1673804836669" duration="3488000" />
+      <workItem from="1673808539163" duration="79000" />
+      <workItem from="1673883329081" duration="2707000" />
     </task>
     <servers />
   </component>

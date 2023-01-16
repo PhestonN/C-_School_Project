@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
-    public float speed = 10f; // ball's speed
-    public float rotationSpeed = 10f; // rotation speed of the ball
-    private Transform cam; // reference to the main camera
-    private Rigidbody rb; // reference to the ball's Rigidbody component
+    public float speed = 10f; 
+    public float rotationSpeed = 10f; 
+    private Transform cam; 
+    private Rigidbody rb; 
 
     void Start()
     {
