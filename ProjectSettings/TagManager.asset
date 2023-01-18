@@ -15,6 +15,7 @@ TagManager:
   - hub
   - audio
   - Teleport
+  - end
   layers:
   - Default
   - TransparentFX

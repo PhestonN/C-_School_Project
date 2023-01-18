@@ -49,6 +49,10 @@ public class UIScript : MonoBehaviour
         {
             audioSource.Play();
         }
+        if (gameObject.CompareTag("end"))
+                {
+                    SceneManager.LoadScene(5);
+                }
 
 
     }
